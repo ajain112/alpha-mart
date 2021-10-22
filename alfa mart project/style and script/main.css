@@ -155,7 +155,7 @@ img{
     width: 4px;
     height: 4px;
     top: 0;
-    margin-top: 25px;
+    margin-top: 20px;
     background-color: var(--dark-color);
     border-radius: 50%;
 }
@@ -348,6 +348,17 @@ img{
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.mew-men-img{
+    height: 50vh;
+    width: 50vh;
+    margin-right: 50px;
+}
+.new-section{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--dark-color2);
+}
 .offer-container{
     grid-template-columns: 55% 45%;
     column-gap: 0;
@@ -393,7 +404,8 @@ img{
 
 .new-title{
     font-size: var(--fsize1);
-    margin-bottom: .25rem
+    margin-bottom: .25rem;
+    width: 100%;
 }
 
 .new-price{
@@ -404,8 +416,12 @@ img{
 .new-sneaker{
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.new-sneaker-shelf{
+    display: flex;
 }
 
 .new-sneaker-card{
@@ -511,6 +527,11 @@ img{
     text-align: center;
 }
 
+@media screen and (max-width: 576px){
+    .new-section{
+        flex-direction: column;
+    }
+}
 @media screen and (min-width: 576px){
     .collection-container{
         grid-template-columns: 415px;
@@ -524,7 +545,6 @@ img{
     .offer-data{
         text-align: center;
     }
-
     .new-men{
         align-items: center;
     }
