@@ -44,3 +44,51 @@ window.onscroll=()=>{
     const nav = document.getElementById('header')
     if(this.scrollY >=200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
+
+const sizes = document.querySelectorAll('.size-s')
+const colors = document.querySelectorAll('.sneaker-color')
+const sneaker = document.querySelectorAll('.sneaker-img')
+
+function changeSize(){
+    sizes.forEach(size => size.classList.remove('active'))
+    this.classList.add('active')
+}
+
+function changeColor(){
+    let primary = this.getAttribute('primary')
+    let color = this.getAttribute('color')
+    let sneakerColor = document.querySelector('.sneaker-img[color="${color}"]')
+
+    colors.forEach(c => c.classList.remove('active'))
+    this.classList.add('active')
+
+    document.documentElement.style.setProperty('--primary',primary)
+    sneaker.forEach(s => s.classList.remove('shows'))
+    sneakerColor.classList.add('shows')
+    
+}
+sizes.forEach(size => size.addEventListener('click',changeSize))
+colors.forEach(c => c.addEventListener('click',changeColor))
+
+
+const signUp = document.getElementById('sign-up'),
+    signIn = document.getElementById('sign-in'),
+    loginIn = document.getElementById('login-in'),
+    loginUp = document.getElementById('log-up')
+
+
+signUp.addEventListener('click', ()=>{
+    loginIn.classList.remove('block')
+    loginUp.classList.remove('none')
+
+    loginIn.classList.add('none')
+    loginUp.classList.add('block')
+})
+
+signIn.addEventListener('click', ()=>{
+    loginIn.classList.remove('none')
+    loginUp.classList.remove('block')
+
+    loginIn.classList.add('block')
+    loginUp.classList.add('none')
+})

@@ -1,7 +1,6 @@
 /* font import */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 /* Variables */
 :root{
     --head-height: 3rem;
@@ -44,9 +43,11 @@
 *,::before,::after{
     box-sizing: border-box;
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 body{
     margin: var(--head-height) 0 0 0;
     font-family: var(--bfont);
@@ -55,25 +56,31 @@ body{
     color: var(--dark-color);
     line-height: 1.6;
 }
+
 h1,h2,h3,p,ul{
     margin: 0;
 }
+
 ul{
     padding: 0;
     list-style: none;
 }
+
 a{
     text-decoration: none;
     color: var(--dark-color);  
 }
+
 img{
     max-width: 100%;
     height: auto;
     display: block;
 }
+
 .section{
     padding:5rem 0 2rem ;
 }
+
 .section-title{
     position:relative;
     font-size: var(--fsize);
@@ -81,6 +88,7 @@ img{
     text-align: center;
     letter-spacing: .1rem;  
 }
+
 .section-title::after{
     content: "";
     position: absolute;
@@ -92,6 +100,7 @@ img{
     margin: auto;
     background-color: var(--dark-color);
 }
+
 .bd-grid{
     max-width: 1024px;
     display: grid;
@@ -101,6 +110,7 @@ img{
     margin-left: var(--mb1);
     margin-right: var(--mb1);
 }
+
 .head1{
     width:100%;
     position:fixed;
@@ -109,6 +119,7 @@ img{
     z-index:var(--z-fixed);
     background-color:var(--dark-color2);
 }
+
 .nav{
     height: var(--head-height);
     display: flex;
@@ -128,14 +139,17 @@ img{
         transition: .5s;
     }
 }
+
 .nav-item{
     margin-bottom: var(--mb3);
 }
+
 .nav-logo{
     height: 50px;
     width: 40px;
     margin-top: 30px;
 }
+
 .nav-toggle, .nav-shop{
     font-size: 1.3rem;
     cursor: pointer;
@@ -144,9 +158,11 @@ img{
 .show{
     left: 0;
 }
+
 .active{
     position: relative;
 }
+
 .active::before{
     content: '';
     position: absolute;
@@ -159,14 +175,17 @@ img{
     background-color: var(--dark-color);
     border-radius: 50%;
 }
+
 .scroll-header{
     background-color: var(--White);
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
+
 .home{
     background-color: var(--dark-color2);
     overflow: hidden;
 }
+
 .home-container{
     height: calc(100vh - var(--head-height));
 }
