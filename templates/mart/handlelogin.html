@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="description" content="This Site is all about shoes whichever you want.. World's largest collection of shoes which would make go WOW!!!">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Shoes, Shoe Mart, Shoes Mart, E-commerece, E-shop, online store, Project, Live Project, Demo Project">
+        <meta name="author" content="AKSHAT JAIN">
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/css/loginsign.css' %}">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <title>THE ALPHA MART</title>
+        <link rel="icon" href="./images/The ALPHA MART.png">
+    </head>
+    
+    <body>
+        <main>
+          <div class="login">
+              <div class="login-cont">
+                  <div class="login-img">
+                      <img src="{% static '/images/bg.jpg' %}" alt="">
+                  </div>
+                  <div class="login-form">
+                      <form action="/handlelogin/" method="post" class="login-reg" id="login-in">
+                      {% csrf_token %}
+                        <img src="{% static '/images/logo.png' %}" class="logo" alt="">
+                        <h1 class="login-tit">LOGIN</h1>
+                        <div class="login-box">
+                            <i class='bx bxs-user login-ico'></i>
+                            <input type="text" placeholder="Username" class="login-inp" name="loginusername">
+                        </div>
+                        
+                        <div class="login-box">
+                            <i class='bx bxs-lock login-ico'></i>
+                            <input type="Password" placeholder="Password" class="login-inp" name="loginpass">
+                        </div>
+
+                        <button type="submit" class="login-but">LOGIN</button>
+                        <a href="#" class="login-for">Forgot Password?</a>
+
+                        <div>
+                            <a class="login-acc" id="sign-up">Don't Have Account?</a>
+                        </div>
+                      </form>
+
+                      <form action="/handlesignup/" method="post" class="login-create none" id="log-up">
+                      {% csrf_token %}
+                        <img src="{% static '/images/logo.png' %}" class="logo1" alt="">
+                        <h1 class="login-tit">Create Account</h1>
+                        <div class="login-box">
+                            <i class='bx bxs-user login-ico'></i>
+                            <input type="text" placeholder="Username" class="login-inp" name="uname">
+                        </div>
+
+                        <div class="login-box">
+                            <i class='bx bx-at login-ico'></i>
+                            <input type="text" placeholder="E-Mail Address" class="login-inp" name="email">
+                        </div>
+                        
+                        <div class="login-box">
+                            <i class='bx bxs-lock login-ico'></i>
+                            <input type="Password" placeholder="Password" class="login-inp" name="pwd">
+                        </div>
+
+                        <div class="login-box">
+                            <i class='bx bxs-lock login-ico'></i>
+                            <input type="Password" placeholder="Confirm Password" class="login-inp" name="pwd1">
+                        </div>
+
+                        <button type="submit" class="login-but">SIGN UP</button>
+
+                        <div>
+                            <a class="login-acc" id="sign-in">Already Have Account?</a>
+                        </div>
+
+                        <div class="login-social">
+                            <a href="https://www.facebook.com/" class="login-social-ico"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.gmail.com" class="login-social-ico"><i class='bx bxl-google'></i></a>
+                            <a href="https://www.twitter.com" class="login-social-ico"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                      </form>
+
+                  </div>
+              </div>
+          </div>
+        </main>
+        <script src="{% static '/js/script.js' %}"></script>
+    </body>

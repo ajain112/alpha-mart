@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="description" content="This Site is all about shoes whichever you want.. World's largest collection of shoes which would make go WOW!!!">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Shoes, Shoe Mart, Shoes Mart, E-commerece, E-shop, online store, Project, Live Project, Demo Project">
+        <meta name="author" content="AKSHAT JAIN">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/product.css' %}">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <title>THE ALPHA MART</title>
+        <link rel="icon" href="/images/The ALPHA MART.png">
+    </head>
+    
+    <body>
+        <header class="head1" id="header">
+            <nav class="nav bd-grid">
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                <a href="/" class="nav-logo"><img src="{% static '/images/logo.png' %}"></a>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
+                        <li class="nav-item"><a href="/Home.html#FEATURED" class="nav-link">FEATURED</a></li>
+                        <li class="nav-item"><a href="/Home.html#WOMEN" class="nav-link">WOMEN</a></li>
+                        <li class="nav-item"><a href="/Home.html#NEW" class="nav-link">NEW</a></li>
+                        <li class="nav-item"><a href="/shop/" class="nav-link active">SHOP</a></li>
+                        <li class="nav-item"><a href="/handlelogin/" class="nav-link">Login</a></li>
+                    </ul>
+                </div>
+                <div class="nav-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="product">
+                    <div class="gallery">
+                        <img class="main-pro" src="{% static '/images/women2.png' %}" alt="NIKE ACE SUMMERLITE">
+                    </div>
+                    <div class="pro-desc">
+                        <h1 class="pro-title">NIKE ACE SUMMERLITE</h1>
+                        <h3 class="price">Rs.9000</h3><br>
+                        <select>
+                            <option value="">Select Your Shoe Size</option>
+                            <option value="">8</option>
+                            <option value="">8.5</option>
+                            <option value="">9</option>
+                            <option value="">9.5</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select><br>
+                        <input type="number" value="1" min="1" max="5">
+                        <a href="#" class="button">Add To Cart</a>
+                        <p class="pro-abt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut harum veniam nesciunt.<br> Quasi beatae quaerat quibusdam, alias eligendi labore<br> quisquam qui, recusandae eius accusamus.</p>
+                    </div>
+            </section>
+        </main>
+        <footer class="footer section">
+            <div class="footer-conatiner bd-grid">
+                <div class="footer-box">
+                    <h3 class="footer-title">THE ALPHA MART</h3>
+               <p class="footer-desc">New Collection of Shoes 2021</p>
+                </div> 
+            
+                <div class="footer-box">
+                    <h3 class="footer-title">EXPLORE</h3>
+                    <ul>
+                        <li><a href="#HOME" class="footer-link">HOME</a></li>
+                        <li><a href="#FEATURED" class="footer-link">Featured</a></li>
+                        <li><a href="#WOMEN" class="footer-link">Women</a></li>
+                        <li><a href="#NEW" class="footer-link">New</a></li>
+                    </ul> 
+                </div>
+
+                <div class="footer-box">
+                    <h3 class="footer-title">SUPPORT</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Product Help</a></li>
+                        <li><a href="#" class="footer-link">Customer Care</a></li>
+                        <li><a href="#" class="footer-link">Authorized Store</a></li>
+                    </ul> 
+                </div>
+
+                <div class="footer-box">
+                    <a href="https://www.facebook.com/ajain112ftv/" class="footer-social"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/ajain112/" class="footer-social"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://twitter.com/a_jain112" class="footer-social"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.youtube.com/c/FashionableTechVision" class="footer-social"><i class='bx bxl-youtube' ></i></a>
+                </div>
+            </div> 
+            <p class="footer-copy">&#169; All rights reserved. Akshat Jain</p>
+        </footer>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>
