@@ -6,7 +6,8 @@
         <meta name="description" content="This Site is all about shoes whichever you want.. World's largest collection of shoes which would make go WOW!!!">
         <meta name="keywords" content="HTML, CSS, JavaScript, Shoes, Shoe Mart, Shoes Mart, E-commerece, E-shop, online store, Project, Live Project, Demo Project">
         <meta name="author" content="AKSHAT JAIN">
-        <link rel="stylesheet" href="./style and script/loginsign.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/css/loginsign.css' %}">
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
         <title>THE ALPHA MART</title>
         <link rel="icon" href="./images/The ALPHA MART.png">
@@ -17,23 +18,24 @@
           <div class="login">
               <div class="login-cont">
                   <div class="login-img">
-                      <img src="./images/bg.jpg" alt="">
+                      <img src="{% static '/images/bg.jpg' %}" alt="">
                   </div>
                   <div class="login-form">
-                      <form action="#" method="post" class="login-reg" id="login-in">
-                        <img src="./images/logo.png" class="logo" alt="">
+                      <form action="/handlelogin/" method="post" class="login-reg" id="login-in">
+                      {% csrf_token %}
+                        <img src="{% static '/images/logo.png' %}" class="logo" alt="">
                         <h1 class="login-tit">LOGIN</h1>
                         <div class="login-box">
                             <i class='bx bxs-user login-ico'></i>
-                            <input type="text" placeholder="Username" class="login-inp">
+                            <input type="text" placeholder="Username" class="login-inp" name="loginusername">
                         </div>
                         
                         <div class="login-box">
                             <i class='bx bxs-lock login-ico'></i>
-                            <input type="Password" placeholder="Password" class="login-inp">
+                            <input type="Password" placeholder="Password" class="login-inp" name="loginpass">
                         </div>
 
-                        <a href="#" class="login-but">LOGIN</a>
+                        <button type="submit" class="login-but">LOGIN</button>
                         <a href="#" class="login-for">Forgot Password?</a>
 
                         <div>
@@ -41,30 +43,31 @@
                         </div>
                       </form>
 
-                      <form action="#" method="post" class="login-create none" id="log-up">
-                        <img src="./images/logo.png" class="logo1" alt="">
+                      <form action="/handlesignup/" method="post" class="login-create none" id="log-up">
+                      {% csrf_token %}
+                        <img src="{% static '/images/logo.png' %}" class="logo1" alt="">
                         <h1 class="login-tit">Create Account</h1>
                         <div class="login-box">
                             <i class='bx bxs-user login-ico'></i>
-                            <input type="text" placeholder="Username" class="login-inp">
+                            <input type="text" placeholder="Username" class="login-inp" name="uname">
                         </div>
 
                         <div class="login-box">
                             <i class='bx bx-at login-ico'></i>
-                            <input type="text" placeholder="E-Mail Address" class="login-inp">
+                            <input type="text" placeholder="E-Mail Address" class="login-inp" name="email">
                         </div>
                         
                         <div class="login-box">
                             <i class='bx bxs-lock login-ico'></i>
-                            <input type="Password" placeholder="Password" class="login-inp">
+                            <input type="Password" placeholder="Password" class="login-inp" name="pwd">
                         </div>
 
                         <div class="login-box">
                             <i class='bx bxs-lock login-ico'></i>
-                            <input type="Password" placeholder="Confirm Password" class="login-inp">
+                            <input type="Password" placeholder="Confirm Password" class="login-inp" name="pwd1">
                         </div>
 
-                        <a href="#" class="login-but">SIGN UP</a>
+                        <button type="submit" class="login-but">SIGN UP</button>
 
                         <div>
                             <a class="login-acc" id="sign-in">Already Have Account?</a>
@@ -81,5 +84,5 @@
               </div>
           </div>
         </main>
-        <script src="./style and script/script.js"></script>
+        <script src="{% static '/js/script.js' %}"></script>
     </body>
